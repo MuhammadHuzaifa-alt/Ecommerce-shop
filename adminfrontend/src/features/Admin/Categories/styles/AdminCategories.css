@@ -1,0 +1,283 @@
+.admin-page {
+  width: 100%;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-page-header {
+  margin-bottom: 25px;
+}
+
+.admin-page-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.admin-page-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.category-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.category-card-header {
+  margin-bottom: 20px;
+}
+
+.category-card-header h2 {
+  margin: 0;
+  font-size: 19px;
+  color: #111827;
+}
+
+.category-card-header p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.category-error {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border-radius: 7px;
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  font-size: 14px;
+}
+
+/* =========================================================
+   CREATE
+========================================================= */
+
+.category-create {
+  display: flex;
+  gap: 12px;
+  max-width: 700px;
+}
+
+.category-create input {
+  flex: 1;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+}
+
+.category-create input:focus {
+  border-color: #2563eb;
+}
+
+.category-add-btn {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.category-add-btn:hover {
+  background: #1d4ed8;
+}
+
+.category-add-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.category-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.category-table th {
+  padding: 14px;
+  text-align: left;
+  background: #f8fafc;
+  color: #374151;
+  font-size: 13px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.category-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 14px;
+}
+
+.category-table tbody tr:hover {
+  background: #fafafa;
+}
+
+/* =========================================================
+   EDIT INPUT
+========================================================= */
+
+.category-edit-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 9px 11px;
+  box-sizing: border-box;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.category-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  padding: 8px 13px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* EDIT */
+
+.edit-btn {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.edit-btn:hover {
+  background: #dbeafe;
+}
+
+/* DELETE */
+
+.delete-btn {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+}
+
+/* SAVE */
+
+.save-btn {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.save-btn:hover {
+  background: #d1fae5;
+}
+
+/* CANCEL */
+
+.cancel-btn {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+.edit-btn:disabled,
+.delete-btn:disabled,
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.category-empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.category-empty h3 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.category-empty p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.category-loading {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .category-card {
+    padding: 16px;
+  }
+
+  .category-create {
+    flex-direction: column;
+    max-width: none;
+  }
+
+  .category-add-btn {
+    width: 100%;
+  }
+
+  .category-actions {
+    flex-wrap: wrap;
+  }
+
+}

@@ -1,0 +1,27 @@
+.profile-card{
+    background:#fff;
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.profile-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile-card-icon{
+    font-size:120px;
+    color:#ff6b00;
+}
+
+.profile-card h3{
+    margin:20px 0 10px;
+}
+
+.profile-card p{
+    color:#777;
+}

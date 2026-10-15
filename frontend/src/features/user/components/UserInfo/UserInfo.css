@@ -1,0 +1,37 @@
+.user-info {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item svg {
+  font-size: 22px;
+  color: #ff6b00;
+  margin-top: 3px;
+}
+
+.info-item span {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.info-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}

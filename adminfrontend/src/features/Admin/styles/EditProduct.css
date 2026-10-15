@@ -1,0 +1,348 @@
+.edit-product-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.edit-product-header {
+  margin-bottom: 24px;
+}
+
+.edit-back-button {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 14px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.edit-back-button:hover {
+  color: #2563eb;
+}
+
+.edit-product-header h1 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 24px;
+}
+
+.edit-product-header p {
+  margin: 6px 0 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* ERROR */
+
+.edit-product-error {
+  margin-bottom: 20px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  font-size: 13px;
+}
+
+
+/* FORM */
+
+.edit-product-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* CARD */
+
+.edit-form-card {
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+}
+
+.edit-form-card-header {
+  padding: 20px 24px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.edit-form-card-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 16px;
+}
+
+.edit-form-card-header p {
+  margin: 5px 0 0;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* BODY */
+
+.edit-form-card-body {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+
+  padding: 24px;
+}
+
+
+/* GROUP */
+
+.edit-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.edit-full-width {
+  grid-column: 1 / -1;
+}
+
+.edit-form-group label {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.edit-form-group label span {
+  margin-left: 3px;
+
+  color: #dc2626;
+}
+
+
+/* INPUT */
+
+.edit-form-group input,
+.edit-form-group select {
+  width: 100%;
+  height: 42px;
+
+  box-sizing: border-box;
+
+  padding: 0 12px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.edit-form-group input:focus,
+.edit-form-group select:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(37, 99, 235, 0.08);
+}
+
+
+/* IMAGE */
+
+.edit-image-input {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.edit-image-input svg {
+  position: absolute;
+
+  left: 13px;
+
+  color: #9ca3af;
+}
+
+.edit-image-input input {
+  padding-left: 38px;
+}
+
+.edit-image-preview {
+  width: 100px;
+  height: 100px;
+
+  margin-top: 10px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+}
+
+.edit-image-preview img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* ACTIONS */
+
+.edit-product-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-bottom: 24px;
+}
+
+.edit-cancel-button,
+.edit-save-button {
+  height: 42px;
+
+  padding: 0 18px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.edit-cancel-button {
+  border: 1px solid #d1d5db;
+
+  background: #ffffff;
+
+  color: #4b5563;
+}
+
+.edit-save-button {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  border: 1px solid #2563eb;
+
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+.edit-save-button:hover {
+  background: #1d4ed8;
+}
+
+.edit-cancel-button:disabled,
+.edit-save-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* LOADING */
+
+.edit-product-loading {
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .edit-form-card-body {
+    grid-template-columns: 1fr;
+
+    padding: 18px;
+  }
+
+  .edit-full-width {
+    grid-column: auto;
+  }
+
+  .edit-form-card-header {
+    padding: 18px;
+  }
+
+  .edit-product-actions {
+    flex-direction: column-reverse;
+  }
+
+  .edit-cancel-button,
+  .edit-save-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+}

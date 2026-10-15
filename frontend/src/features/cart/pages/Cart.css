@@ -1,0 +1,587 @@
+/* =========================================================
+   CART PAGE
+========================================================= */
+
+.cart-page {
+  width: 100%;
+  padding: 40px 20px 80px;
+  background: #f8f9fb;
+  min-height: 60vh;
+}
+
+.cart-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 30px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   CART LEFT
+========================================================= */
+
+.cart-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* =========================================================
+   CART ITEM
+========================================================= */
+
+.cart-item {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   CART ITEM IMAGE
+========================================================= */
+
+.cart-item-image {
+  width: 110px;
+  height: 110px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f3f4f6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CART ITEM CONTENT
+========================================================= */
+
+.cart-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-item-content h3 {
+  margin: 0 0 6px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.cart-item-brand {
+  margin: 0 0 5px;
+
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.cart-item-category {
+  margin: 0;
+
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+
+/* =========================================================
+   CART ITEM PRICE
+========================================================= */
+
+.cart-item-price {
+  margin-top: 10px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-quantity button {
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cart-item-quantity button:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.cart-item-quantity span {
+  min-width: 25px;
+
+  text-align: center;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   REMOVE BUTTON
+========================================================= */
+
+.cart-item-remove {
+  border: none;
+  background: transparent;
+
+  color: #ef4444;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: color 0.2s ease;
+}
+
+.cart-item-remove:hover {
+  color: #b91c1c;
+}
+
+
+/* =========================================================
+   EMPTY CART
+========================================================= */
+
+.empty-cart {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 70px 30px;
+
+  text-align: center;
+}
+
+.empty-cart h2 {
+  margin: 0 0 10px;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.empty-cart p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   COUPON BOX
+========================================================= */
+
+.coupon-box {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.coupon-box input {
+  flex: 1;
+
+  height: 44px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: border-color 0.2s ease;
+}
+
+.coupon-box input:focus {
+  border-color: #111827;
+}
+
+.coupon-box button {
+  height: 44px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.coupon-box button:hover {
+  background: #000000;
+}
+
+.coupon-box button:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   CART RIGHT
+========================================================= */
+
+.cart-right {
+  width: 100%;
+
+  position: sticky;
+  top: 20px;
+}
+
+
+/* =========================================================
+   CART SUMMARY
+========================================================= */
+
+.cart-summary {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 25px;
+}
+
+.cart-summary h2 {
+  margin: 0 0 20px;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+
+/* =========================================================
+   SUMMARY ROW
+========================================================= */
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  font-size: 15px;
+
+  color: #6b7280;
+}
+
+.summary-row strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DISCOUNT
+========================================================= */
+
+.summary-discount {
+  color: #16a34a;
+}
+
+.summary-discount strong {
+  color: #16a34a;
+}
+
+
+/* =========================================================
+   SUMMARY DIVIDER
+========================================================= */
+
+.summary-divider {
+  width: 100%;
+  height: 1px;
+
+  background: #e5e7eb;
+
+  margin: 10px 0;
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+.summary-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 15px;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* =========================================================
+   CHECKOUT BUTTON
+========================================================= */
+
+.checkout-btn {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background: #000000;
+}
+
+.checkout-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   CONTINUE SHOPPING
+========================================================= */
+
+.continue-shopping {
+  display: block;
+
+  margin-top: 15px;
+
+  text-align: center;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  text-decoration: none;
+}
+
+.continue-shopping:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-right {
+    position: static;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .cart-page {
+    padding: 25px 15px 60px;
+  }
+
+
+  .cart-item {
+    padding: 15px;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+  }
+
+
+  .cart-item-image {
+    width: 85px;
+    height: 85px;
+  }
+
+
+  .cart-item-content {
+    width: calc(100% - 100px);
+  }
+
+
+  .cart-item-content h3 {
+    font-size: 16px;
+  }
+
+
+  .cart-item-quantity {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+
+  .cart-item-remove {
+    margin-left: auto;
+  }
+
+
+  .coupon-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+
+  .coupon-box input,
+  .coupon-box button {
+    width: 100%;
+  }
+
+
+  .cart-summary {
+    padding: 20px;
+  }
+
+
+  .empty-cart {
+    padding: 50px 20px;
+  }
+
+
+  .empty-cart h2 {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .cart-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .cart-item {
+    padding: 12px;
+  }
+
+  .cart-item-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cart-summary {
+    padding: 17px;
+  }
+
+}

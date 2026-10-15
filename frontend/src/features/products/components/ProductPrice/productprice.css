@@ -1,0 +1,43 @@
+.product-price{
+    margin:10px 0;
+}
+
+.price-wrapper{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.current-price{
+    font-size:24px;
+    font-weight:700;
+    color:#ff6b00;
+}
+
+.old-price{
+    font-size:18px;
+    color:#9ca3af;
+    text-decoration:line-through;
+}
+
+.discount-percent{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:4px 8px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.current-price{
+    font-size:20px;
+}
+
+.old-price{
+    font-size:16px;
+}
+
+}

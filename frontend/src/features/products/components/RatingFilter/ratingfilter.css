@@ -1,0 +1,69 @@
+.rating-filter{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:20px;
+}
+
+.filter-title{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:18px;
+    color:#1f2937;
+}
+
+.rating-item{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 14px;
+    margin-bottom:10px;
+
+    border:1px solid #e5e7eb;
+    border-radius:8px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.rating-item:hover{
+    border-color:#ff6b00;
+    background:#fff7ed;
+}
+
+.rating-item.active{
+    background:#ff6b00;
+    color:#ffffff;
+    border-color:#ff6b00;
+}
+
+.stars{
+    display:flex;
+    gap:3px;
+    color:#fbbf24;
+}
+
+.rating-item.active .stars{
+    color:#ffffff;
+}
+
+.rating-item:last-child{
+    margin-bottom:0;
+}
+
+@media(max-width:768px){
+
+.rating-filter{
+    padding:16px;
+}
+
+.filter-title{
+    font-size:18px;
+}
+
+}

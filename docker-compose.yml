@@ -1,0 +1,86 @@
+services:
+
+  # =========================
+  # PostgreSQL
+  # =========================
+  db:
+    image: postgres:18
+    container_name: ecommerce-postgres
+
+    environment:
+      POSTGRES_DB: ecommerce_db
+      POSTGRES_USER: ecommerce_user
+      POSTGRES_PASSWORD: ecommerce_password
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql
+
+
+  # =========================
+  # Django Backend
+  # =========================
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    container_name: ecommerce-backend
+
+    command: python manage.py runserver 0.0.0.0:8000
+
+    volumes:
+      - ./backend:/app
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      POSTGRES_DB: ecommerce_db
+      POSTGRES_USER: ecommerce_user
+      POSTGRES_PASSWORD: ecommerce_password
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+
+    depends_on:
+      - db
+
+
+  # =========================
+  # Customer Frontend
+  # =========================
+  client:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+    container_name: client-frontend-container
+
+    ports:
+      - "1573:80"
+
+    depends_on:
+      - backend
+
+
+  # =========================
+  # Admin Frontend
+  # =========================
+  admin:
+    build:
+      context: ./adminfrontend
+      dockerfile: Dockerfile
+
+    container_name: admin-frontend-container
+
+    ports:
+      - "1574:80"
+
+    depends_on:
+      - backend
+
+
+volumes:
+  postgres_data:

@@ -1,0 +1,117 @@
+.contact-cta{
+    padding:90px 0;
+    background:linear-gradient(135deg,#ff6b00,#ff8f1f);
+}
+
+.contact-cta-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.contact-cta-content{
+    color:#fff;
+    max-width:700px;
+}
+
+.contact-cta-badge{
+    display:inline-block;
+    background:rgba(255,255,255,.18);
+    padding:8px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.contact-cta-content h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.contact-cta-content p{
+    font-size:18px;
+    line-height:1.8;
+    color:rgba(255,255,255,.92);
+}
+
+.contact-cta-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.cta-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.cta-btn.primary{
+    background:#fff;
+    color:#ff6b00;
+}
+
+.cta-btn.primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.cta-btn.secondary{
+    border:2px solid rgba(255,255,255,.5);
+    color:#fff;
+}
+
+.cta-btn.secondary:hover{
+    background:#fff;
+    color:#ff6b00;
+}
+
+@media(max-width:992px){
+
+    .contact-cta-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .contact-cta-buttons{
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .contact-cta{
+        padding:70px 0;
+    }
+
+    .contact-cta-content h2{
+        font-size:36px;
+    }
+
+    .contact-cta-content p{
+        font-size:16px;
+    }
+
+    .cta-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}

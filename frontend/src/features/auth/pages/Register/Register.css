@@ -1,0 +1,164 @@
+/* Register.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f8fafc;
+}
+
+/* ===========================
+   Left Section
+=========================== */
+
+.register-left {
+  background: linear-gradient(135deg, #dd913f, #d5740c);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.register-content {
+  max-width: 500px;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.register-content h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.register-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* ===========================
+   Right Section
+=========================== */
+
+.register-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.register-form h2 {
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.register-form > p {
+  color: #64748b;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.register-form button {
+  margin-top: 10px;
+}
+
+/* ===========================
+   Login Link
+=========================== */
+
+.login-link {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.login-link a {
+  color: #2563eb;
+  font-weight: 600;
+  margin-left: 6px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 992px) {
+  .register {
+    grid-template-columns: 1fr;
+  }
+
+  .register-left {
+    display: none;
+  }
+
+  .register-right {
+    padding: 30px 20px;
+  }
+
+  .register-form {
+    max-width: 100%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .register-right {
+    padding: 20px 15px;
+  }
+
+  .register-form {
+    padding: 25px 20px;
+    border-radius: 16px;
+    gap: 16px;
+  }
+
+  .register-form h2 {
+    font-size: 1.75rem;
+  }
+
+  .register-form > p {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+}

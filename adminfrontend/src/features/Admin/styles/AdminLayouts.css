@@ -1,0 +1,38 @@
+.admin-layout {
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #f5f7fb;
+}
+
+.admin-content {
+  min-width: 0;
+
+  flex: 1;
+
+  margin-left: 250px;
+}
+
+.admin-main {
+  min-height: calc(100vh - 70px);
+
+  padding: 30px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admin-content {
+    margin-left: 0;
+  }
+
+  .admin-main {
+    padding: 24px;
+  }
+
+}

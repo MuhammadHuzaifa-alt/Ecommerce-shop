@@ -1,0 +1,51 @@
+```dockerignore
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Git
+.git/
+.gitignore
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases
+db.sqlite3
+*.sqlite3
+
+# User-uploaded media
+media/
+
+# Generated static files
+staticfiles/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

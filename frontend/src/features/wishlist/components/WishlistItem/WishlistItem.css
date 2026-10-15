@@ -1,0 +1,159 @@
+.wishlist-item{
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+
+    padding:20px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.wishlist-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.wishlist-image img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+.wishlist-content{
+    flex:1;
+}
+
+.wishlist-brand{
+    display:inline-block;
+
+    color:#ff6b00;
+
+    font-size:14px;
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+.wishlist-content h3{
+    font-size:24px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.wishlist-rating{
+    display:flex;
+    gap:4px;
+
+    color:#f59e0b;
+
+    margin-bottom:15px;
+}
+
+.wishlist-price{
+    font-size:28px;
+    font-weight:700;
+    color:#111827;
+
+    margin-bottom:15px;
+}
+
+.stock{
+    display:inline-block;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:700;
+}
+
+.in-stock{
+    background:#ecfdf5;
+    color:#059669;
+}
+
+.out-stock{
+    background:#fef2f2;
+    color:#dc2626;
+}
+
+.wishlist-actions{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.cart-btn,
+.remove-btn{
+    border:none;
+
+    border-radius:10px;
+
+    padding:14px 18px;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.cart-btn{
+    background:#ff6b00;
+    color:#fff;
+}
+
+.cart-btn:hover:not(:disabled){
+    background:#e65f00;
+}
+
+.cart-btn:disabled{
+    background:#d1d5db;
+    cursor:not-allowed;
+}
+
+.remove-btn{
+    background:#fff5f5;
+    color:#dc2626;
+}
+
+.remove-btn:hover{
+    background:#fee2e2;
+}
+
+@media(max-width:900px){
+
+.wishlist-item{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.wishlist-image img{
+    width:100%;
+    height:260px;
+}
+
+.wishlist-actions{
+    width:100%;
+}
+
+.cart-btn,
+.remove-btn{
+    width:100%;
+}
+
+}

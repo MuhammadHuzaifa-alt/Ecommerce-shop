@@ -1,0 +1,40 @@
+.contact-page{
+    background:#f8fafc;
+}
+
+/* Common container */
+
+.contact-page .container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Optional spacing adjustments */
+
+.contact-page section{
+    position:relative;
+}
+
+/* Smooth scrolling */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Better image rendering */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .contact-page{
+        overflow:hidden;
+    }
+
+}

@@ -1,0 +1,294 @@
+.admin-dashboard {
+  max-width: 1600px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   WELCOME
+========================================= */
+
+.dashboard-welcome {
+  margin-bottom: 25px;
+}
+
+.dashboard-welcome h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.dashboard-welcome p {
+  margin: 6px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.dashboard-stat-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+.dashboard-stat-card {
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 2px 8px rgba(
+      15,
+      23,
+      42,
+      0.03
+    );
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+}
+
+.stat-icon.products {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.stat-icon.categories {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.stat-icon.orders {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.stat-icon.customers {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.stat-growth {
+  display: flex;
+  align-items: center;
+
+  gap: 3px;
+
+  color: #16a34a;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.stat-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.stat-value {
+  color: #111827;
+
+  font-size: 25px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.dashboard-content-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(300px, 1fr);
+
+  gap: 20px;
+}
+
+.dashboard-panel {
+  min-height: 300px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+}
+
+.dashboard-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.dashboard-panel-header h3 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 16px;
+}
+
+.dashboard-panel-header p {
+  margin: 5px 0 0;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+.dashboard-panel-header select {
+  height: 35px;
+
+  padding: 0 10px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  color: #4b5563;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   SALES PLACEHOLDER
+========================================= */
+
+.sales-placeholder {
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #d1d5db;
+
+  border-radius: 8px;
+}
+
+.placeholder-line {
+  color: #9ca3af;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ORDER STATUS
+========================================= */
+
+.order-status-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.order-status-list div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 13px 14px;
+
+  border-radius: 8px;
+
+  background: #f9fafb;
+}
+
+.order-status-list span {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.order-status-list strong {
+  color: #111827;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard-stat-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .dashboard-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-dashboard {
+    width: 100%;
+  }
+
+}
