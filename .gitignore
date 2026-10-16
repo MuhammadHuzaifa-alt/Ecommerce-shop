@@ -106,3 +106,4 @@ vault-password-file
 .DS_Store
 Thumbs.db
 Desktop.ini"node_modules/" 
+'/node_modules/' 
