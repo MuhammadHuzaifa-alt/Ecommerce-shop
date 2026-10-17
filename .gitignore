@@ -34,16 +34,13 @@ htmlcov/
 db.sqlite3
 db.sqlite3-journal
 staticfiles/
-*.log
-
-# Keep source migrations tracked
-# Do not ignore migrations/
 
 # ==============================
 # React / Node.js / Vite
 # ==============================
 node_modules/
 dist/
+dist-ssr/
 build/
 .vite/
 coverage/
