@@ -1,106 +1,93 @@
-node_modules
 # ==============================
-# Environment variables / secrets
-# ==============================
-.env
-.env.*
-!.env.example
-!.env.*.example
-*.pem
-*.key
-secrets/
-credentials.json
-
-# ==============================
-# Python / Django backend
+# Python / Django Backend
 # ==============================
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
+*.pyo
+*.pyd
+*.log
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Python virtual environments
 venv/
 .venv/
 env/
 ENV/
-pip-wheel-metadata/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
 
 # Django generated files
+local_settings.py
 db.sqlite3
 db.sqlite3-journal
+media/
 staticfiles/
 
 # ==============================
-# React / Node.js / Vite
+# Node.js / React Frontends
+# Applies to client and admin
 # ==============================
 node_modules/
 dist/
 dist-ssr/
 build/
-.vite/
 coverage/
-.npm/
-.eslintcache
-*.tsbuildinfo
+.cache/
+.vite/
 
-# Package manager logs
 npm-debug.log*
 yarn-debug.log*
+yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
 # ==============================
-# Uploaded media
+# Environment Variables / Secrets
 # ==============================
-# Uncomment if uploaded files should stay local:
-# media/
-# uploads/
+.env
+.env.*
+!.env.example
 
 # ==============================
-# Docker / local data
+# Logs / Temporary Files
 # ==============================
-# Ignore local database backups
-*.sql
-*.dump
+logs/
+*.tmp
 *.bak
+*.local
 
 # ==============================
-# Terraform
+# IDE / Editors
 # ==============================
-**/.terraform/*
-*.tfstate
-*.tfstate.*
-crash.log
-crash.*.log
-*.tfplan
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Keep Terraform dependency lock files tracked
-!**/.terraform.lock.hcl
-
-# ==============================
-# Ansible
-# ==============================
-*.retry
-vault-password
-vault-password-file
-
-# ==============================
-# Editors / operating systems
-# ==============================
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .idea/
 *.swp
 *.swo
-*~
+
+# ==============================
+# Operating System
+# ==============================
 .DS_Store
 Thumbs.db
-Desktop.ini"node_modules/" 
-'/node_modules/' 
+Desktop.ini
+
+# ==============================
+# Python Build Artifacts
+# ==============================
+build/
+dist/
+*.egg-info/
+
+# ==============================
+# Terraform (if used in this repo)
+# ==============================
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
