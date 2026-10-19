@@ -1,0 +1,24 @@
+
+services:
+  db:
+    container_name: null
+    ports: !reset []
+    volumes: !reset []
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ecommerce_user -d ecommerce_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  backend:
+    container_name: null
+    ports: !reset []
+    volumes: !reset []
+
+  client:
+    container_name: null
+    ports: !reset []
+
+  admin:
+    container_name: null
+    ports: !reset []
