@@ -10,7 +10,7 @@ pipeline {
 
     environment {
         COMPOSE_FILE = 'docker-compose.yml:docker-compose.ci.yml'
-        COMPOSE_PROJECT_NAME = 'ecommerce-ci-${BUILD_NUMBER}'
+        COMPOSE_PROJECT_NAME = "ecommerce-ci-${BUILD_NUMBER}"
     }
 
     stages {
