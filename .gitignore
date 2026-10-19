@@ -91,3 +91,6 @@ dist/
 *.tfplan
 *.tfvars
 !*.tfvars.example
+
+# Backend Python virtual environment (machine-specific)
+backend/venv/
