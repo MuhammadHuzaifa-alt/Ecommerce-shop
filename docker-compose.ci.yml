@@ -1,7 +1,6 @@
 
 services:
   db:
-    container_name: null
     ports: !reset []
     volumes: !reset []
     healthcheck:
@@ -11,14 +10,11 @@ services:
       retries: 12
 
   backend:
-    container_name: null
     ports: !reset []
     volumes: !reset []
 
   client:
-    container_name: null
     ports: !reset []
 
   admin:
-    container_name: null
     ports: !reset []
