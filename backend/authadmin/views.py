@@ -1,3 +1,4 @@
+import os
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -5,8 +6,8 @@ from rest_framework import status
 from rest_framework_simplejwt.tokens import RefreshToken
 
 
-ADMIN_EMAIL = "admin@gmail.com"
-ADMIN_PASSWORD = "admin123"
+ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "")
 
 
 class AdminLoginView(APIView):
