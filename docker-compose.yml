@@ -5,7 +5,6 @@ services:
   # =========================
   db:
     image: postgres:18
-    container_name: ecommerce-postgres
 
     environment:
       POSTGRES_DB: ecommerce_db
@@ -27,7 +26,6 @@ services:
       context: ./backend
       dockerfile: Dockerfile
 
-    container_name: ecommerce-backend
 
     command: python manage.py runserver 0.0.0.0:8000
 
@@ -56,7 +54,6 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
 
-    container_name: client-frontend-container
 
     ports:
       - "1573:80"
@@ -73,7 +70,6 @@ services:
       context: ./adminfrontend
       dockerfile: Dockerfile
 
-    container_name: admin-frontend-container
 
     ports:
       - "1574:80"
